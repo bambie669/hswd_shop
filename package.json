@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/bambie669/hswd_shop/issues"
   },
-  "homepage": "https://github.com/bambie669/hswd_shop#readme"
+  "homepage": "https://github.com/bambie669/hswd_shop#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
 }
