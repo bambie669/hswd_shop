@@ -1,0 +1,23 @@
+{
+  "name": "hermosa_shop",
+  "version": "1.2.4",
+  "description": "online shop",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bambie669/hswd_shop.git"
+  },
+  "keywords": [
+    "node",
+    "shop"
+  ],
+  "author": "Radu Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bambie669/hswd_shop/issues"
+  },
+  "homepage": "https://github.com/bambie669/hswd_shop#readme"
+}
