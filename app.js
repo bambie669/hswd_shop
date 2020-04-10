@@ -4,11 +4,11 @@ const shop = express();
 
 shop.use(bodyParser.urlencoded({extended: false}));
 
-shop.use('/',(req, res, next) => {
+// shop.use('/',(req, res, next) => {
     
-    // res.send('<p> the midd that handles main app</p>')
-    next();
-});
+//     // res.send('<p> the midd that handles main app</p>')
+//     next();
+// });
 
 
 
@@ -16,7 +16,7 @@ shop.use('/add-product', (req, res, next) => {
     res.send('<form action="/product" method="post"><input type="text" name="title"><button type="submit">Adauga Produs</button></form>')
 })
 
-shop.use('/product',(req, res,next) => {
+shop.post('/product',(req, res,next) => {
     console.log(req.body);
     res.redirect('/');
     
@@ -26,7 +26,7 @@ shop.use('/',(req, res, next) => {
     
     res.send('<p> the midd that handles main app</p>')
     
-});
+})
 
 // shop.use('/whatsnew',(req, res, next) => {
     
