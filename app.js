@@ -1,22 +1,24 @@
+const path = require("path");
 const express = require("express");
 const bodyParser = require("body-parser");
 
 const shop = express();
 
-const adminRoutes = require('./routes/admin');
-const shopRoutes = require('./routes/shop');
+shop.set('view engine', 'pug');
+shop.set('views', 'views')
+
+const adminData = require("./routes/admin");
+const shopRoutes = require("./routes/shop");
 
 shop.use(bodyParser.urlencoded({ extended: false }));
+shop.use(express.static(path.join(__dirname, 'public')));
 
-shop.use('/admin', adminRoutes);
+shop.use('/admin', adminData.routes);
 shop.use(shopRoutes);
 
 
-
 shop.use((req, res, next) => {
-
-    res.status(404).send('<p>💩page💩not💩found💩</p>')
-    
+  res.status(404).sendFile(path.join(__dirname, "views", "404.html"));
 });
 
 // shop.use('/whatsnew',(req, res, next) => {
